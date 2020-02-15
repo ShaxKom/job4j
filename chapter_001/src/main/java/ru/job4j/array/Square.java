@@ -19,7 +19,7 @@ public class Square {
     }
 
     /**
-     * Main.
+     * Main. Расчёт и вывод результата на консоль
      * @param args-args
      */
     public static void main(String[] args){
