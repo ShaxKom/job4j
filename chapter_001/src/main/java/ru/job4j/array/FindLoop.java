@@ -3,7 +3,7 @@ package ru.job4j.array;
 /**
  * Класс для поиска элемента в массиве
  * @author Shakhzod Kamilov
- * @version 2
+ * @version 3
  */
 public class FindLoop {
     /**
@@ -40,6 +40,21 @@ public class FindLoop {
             }
         }
         return result;
+    }
+
+    /**
+     * Сортировка заданного массива от наименьшего к наибольшему
+     * @param data входной массив
+     * @return отсортированный массив
+     */
+    public static int[] sort(int[] data){
+        for (int i=0;i<data.length;i++){
+            int min = MinDiapason.findMin(data,i,data.length-1);
+            int index = FindLoop.indexOf(data,min,i,data.length-1);
+            SwitchArray.swap(data,index,i);
+        }
+
+        return data;
     }
 
 }
