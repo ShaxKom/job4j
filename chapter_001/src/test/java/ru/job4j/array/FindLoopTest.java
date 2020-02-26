@@ -30,4 +30,20 @@ public class FindLoopTest {
 
     }
 
+    @Test
+    public void whenFind5(){
+        int expect = 6;
+        int[] input = {4,8,6,1,2,84,5,65,21,89};
+        int result = FindLoop.indexOf(input,5,4,8);
+        assertThat(result,is(expect));
+    }
+
+    @Test
+    public void whenDoNotInclude(){
+        int expect = -1;
+        int [] input = {84,35,321,813,8,61,2,321,13,72};
+        int result = FindLoop.indexOf(input,72,3,7);
+        assertThat(result,is(expect));
+    }
+
 }

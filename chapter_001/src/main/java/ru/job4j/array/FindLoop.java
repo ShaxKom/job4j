@@ -1,9 +1,9 @@
 package ru.job4j.array;
 
 /**
- * Класс для поиска элемента в массива
+ * Класс для поиска элемента в массиве
  * @author Shakhzod Kamilov
- * @version 1
+ * @version 2
  */
 public class FindLoop {
     /**
@@ -21,6 +21,25 @@ public class FindLoop {
             }
         }
         return rst;
+    }
+
+    /**
+     * Поиск элемента в массиве в заданном диапазоне
+     * @param data вводный массив
+     * @param el искомые элемент
+     * @param start начальный индекс
+     * @param finish конечный индекс
+     * @return возвращает индекс элемента. В случае отсутствия -1
+     */
+    public static int indexOf(int[] data, int el, int start, int finish){
+        int result = -1;
+        for (int index=start;index<=finish;index++){
+            if(el==data[index]){
+                result=index;
+                break;
+            }
+        }
+        return result;
     }
 
 }
