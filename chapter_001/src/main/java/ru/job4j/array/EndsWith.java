@@ -16,7 +16,7 @@ public class EndsWith {
         boolean result = false;
         if (word.length >= post.length) {
             result = true;
-            for (int index=1;index<post.length;index++){
+            for (int index=1;index<=post.length;index++){
                 if(word[word.length-index]!=post[post.length-index]){
                     result=false;
                     break;
