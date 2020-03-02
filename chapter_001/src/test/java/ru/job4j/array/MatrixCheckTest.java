@@ -57,4 +57,30 @@ public class MatrixCheckTest {
         assertThat(result,is(false));
 
     }
+
+    @Test
+    public void whenDiagonal(){
+        char[][] input = {
+                {'X',' ','X',' '},
+                {' ','X',' ','X'},
+                {' ','X','X',' '},
+                {' ',' ',' ','X'}
+        };
+        char[] expect = {'X','X','X','X'};
+        char[] result = MatrixCheck.extractDiagonal(input);
+        assertThat(result,is(expect));
+    }
+
+    @Test
+    public void whenDiagonal2(){
+        char[][] input = {
+                {'X','X',' ',' '},
+                {' ','X',' ',' '},
+                {' ','X',' ',' '},
+                {' ','X',' ','X'}
+        };
+        char[] expect = {'X','X',' ','X'};
+        char[] result = MatrixCheck.extractDiagonal(input);
+        assertThat(result,is(expect));
+    }
 }
