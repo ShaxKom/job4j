@@ -3,7 +3,7 @@ package ru.job4j.array;
 /**
  * Проверяет заполнена ли определённая строка или столбец матрицы символом 'X'
  * @author Shakhzod Kamilov
- * @version 3
+ * @version 4
  */
 
 public class MatrixCheck {
@@ -64,6 +64,22 @@ public class MatrixCheck {
         char[] result = new char[board.length];
         for (int i=0;i<board.length;i++){
             result[i]=board[i][i];
+        }
+        return result;
+    }
+
+    /**
+     * Проверяет имеет ли матрица горизонтально или вертикально расположенные символы'X'
+     * @param board входная матрица
+     * @return возвращает логическое выражение
+     */
+    public static boolean isWin(char[][] board){
+        boolean result = false;
+        for (int i=0; i<board.length;i++){
+            if(board[i][i]=='X'  &  (monoHorizontal(board,i) || monoVertical(board,i))) {
+                result = true;
+                break;
+            }
         }
         return result;
     }
