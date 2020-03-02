@@ -7,7 +7,7 @@ import static org.hamcrest.core.Is.is;
 /**
  * Тетс-класс для MatrixCheck.java
  * @author Shakhzod Kamilov
- * @version 2
+ * @version 3
  */
 
 public class MatrixCheckTest {
@@ -58,6 +58,7 @@ public class MatrixCheckTest {
 
     }
 
+
     @Test
     public void whenDiagonal(){
         char[][] input = {
@@ -83,4 +84,5 @@ public class MatrixCheckTest {
         char[] result = MatrixCheck.extractDiagonal(input);
         assertThat(result,is(expect));
     }
+
 }
