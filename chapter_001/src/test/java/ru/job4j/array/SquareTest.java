@@ -10,19 +10,19 @@ import static org.hamcrest.core.Is.is;
  */
 public class SquareTest {
    @Test
-   public void whenBound3Then014(){
+   public void whenBound3Then014() {
        int bound = 3;
        int[] result = Square.calculate(bound);
-       int[] expect = new int[] {0,1,4};
-       assertThat(result,is(expect));
+       int[] expect = new int[] {0, 1, 4};
+       assertThat(result, is(expect));
    }
 
    @Test
-    public void whenBound5Then014916(){
+    public void whenBound5Then014916() {
        int bound = 5;
-       int[] result= Square.calculate(5);
-       int[] expect = new int[]{0,1,4,9,16};
-       assertThat(result,is(expect));
+       int[] result = Square.calculate(5);
+       int[] expect = new int[]{0, 1, 4, 9, 16};
+       assertThat(result, is(expect));
    }
 
 }

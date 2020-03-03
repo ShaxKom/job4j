@@ -13,10 +13,10 @@ public class CheckPrimeNumber {
      * @return возвращает логическое выражение, простое число или нет.
      */
 
-    public static boolean check(int number){
-        boolean prime = number>1? true:false;
-        for(int i = 2; i<number; i++){
-            if (number%i==0) {
+    public static boolean check(int number) {
+        boolean prime = number > 1 ? true : false;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
                 prime = false;
                 break;
             }

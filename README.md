@@ -1,1 +1,1 @@
-# job4j Cloned to other computer
+# job4j Делаем проверочные изменения

@@ -12,10 +12,10 @@ public class FindLoop {
      * @param el   элемент который нужно найты в массиве
      * @return   номер ячейки элемента в массиве
      */
-    public int indexOf(int[] data, int el){
+    public int indexOf(int[] data, int el) {
         int rst = -1;
-        for (int i=0; i<data.length;i++){
-            if (el==data[i]) {
+        for (int i = 0; i < data.length; i++) {
+            if (el == data[i]) {
                 rst = i;
                 break;
             }
@@ -31,11 +31,11 @@ public class FindLoop {
      * @param finish конечный индекс
      * @return возвращает индекс элемента. В случае отсутствия -1
      */
-    public static int indexOf(int[] data, int el, int start, int finish){
+    public static int indexOf(int[] data, int el, int start, int finish) {
         int result = -1;
-        for (int index=start;index<=finish;index++){
-            if(el==data[index]){
-                result=index;
+        for (int index = start; index <= finish; index++) {
+            if (el == data[index]) {
+                result = index;
                 break;
             }
         }
@@ -47,11 +47,11 @@ public class FindLoop {
      * @param data входной массив
      * @return отсортированный массив
      */
-    public static int[] sort(int[] data){
-        for (int i=0;i<data.length;i++){
-            int min = MinDiapason.findMin(data,i,data.length-1);
-            int index = FindLoop.indexOf(data,min,i,data.length-1);
-            SwitchArray.swap(data,index,i);
+    public static int[] sort(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            int min = MinDiapason.findMin(data, i, data.length - 1);
+            int index = FindLoop.indexOf(data, min, i, data.length - 1);
+            SwitchArray.swap(data, index, i);
         }
 
         return data;

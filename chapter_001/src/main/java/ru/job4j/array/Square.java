@@ -11,10 +11,11 @@ public class Square {
      * @param bound до какого числа возводить в квадрат
      * @return массив возведенных в квадрат чисел
      */
-    public static int[] calculate(int bound){
+    public static int[] calculate(int bound) {
         int[] rst = new int[bound];
-        for (int i=0; i<bound;i++)
-            rst[i]=i*i;
+        for (int i = 0; i < bound; i++) {
+            rst[i] = i * i;
+        }
         return rst;
     }
 
@@ -22,8 +23,8 @@ public class Square {
      * Main. Расчёт и вывод результата на консоль
      * @param args-args
      */
-    public static void main(String[] args){
-        int[] array=calculate(4);
+    public static void main(String[] args) {
+        int[] array = calculate(4);
         for (int i : array) {
             System.out.println(i);
         }

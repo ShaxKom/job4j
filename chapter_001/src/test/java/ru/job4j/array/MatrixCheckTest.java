@@ -12,93 +12,93 @@ import static org.hamcrest.core.Is.is;
 
 public class MatrixCheckTest {
     @Test
-    public void whenHasMonoHorizontal(){
+    public void whenHasMonoHorizontal() {
         char[][] input = {
-                {'X',' ',' ',' '},
-                {'X','X','X','X'},
-                {'X',' ',' ',' '},
-                {'X',' ',' ',' '},
-                {'X',' ',' ',' '}
+                {'X', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X'},
+                {'X', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' '}
         };
-        boolean result = MatrixCheck.monoHorizontal(input,1);
-        assertThat(result,is(true));
+        boolean result = MatrixCheck.monoHorizontal(input, 1);
+        assertThat(result, is(true));
     }
     @Test
-    public void whenHasNotMonoHorizontal(){
+    public void whenHasNotMonoHorizontal() {
         char[][] input = {
-                {'X','X','X','X'},
-                {' ',' ','X','X'},
-                {'X',' ',' ',' '},
-                {'X',' ',' ',' '},
-                {' ',' ',' ',' '}
+                {'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', 'X'},
+                {'X', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' '}
         };
-        boolean result = MatrixCheck.monoHorizontal(input,1);
-        assertThat(result,is(false));
+        boolean result = MatrixCheck.monoHorizontal(input, 1);
+        assertThat(result, is(false));
     }
     @Test
-    public void whenHasMonoVertical(){
-        char[][] input={
-                {' ','X',' ','X',' '},
-                {' ','X',' ','X',' '},
-                {' ',' ',' ','X',' '},
-                {' ',' ',' ','X',' '} };
-        boolean result = MatrixCheck.monoVertical(input,3);
-        assertThat(result,is(true));
-    }
-
-    @Test
-    public void whenHasNotMonoVertical(){
+    public void whenHasMonoVertical() {
         char[][] input = {
-                {' ',' ',' ','X'},
-                {' ',' ',' ','X'},
-                {' ',' ',' ',' '},
-                {' ',' ',' ','X'} };
-        boolean result = MatrixCheck.monoVertical(input,3);
-        assertThat(result,is(false));
+                {' ', 'X', ' ', 'X', ' '},
+                {' ', 'X', ' ', 'X', ' '},
+                {' ', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', 'X', ' '} };
+        boolean result = MatrixCheck.monoVertical(input, 3);
+        assertThat(result, is(true));
+    }
+
+    @Test
+    public void whenHasNotMonoVertical() {
+        char[][] input = {
+                {' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', 'X'} };
+        boolean result = MatrixCheck.monoVertical(input, 3);
+        assertThat(result, is(false));
 
     }
 
 
     @Test
-    public void whenDiagonal(){
+    public void whenDiagonal() {
         char[][] input = {
-                {'X',' ','X',' '},
-                {' ','X',' ','X'},
-                {' ','X','X',' '},
-                {' ',' ',' ','X'}
+                {'X', ' ', 'X', ' '},
+                {' ', 'X', ' ', 'X'},
+                {' ', 'X', 'X', ' '},
+                {' ', ' ', ' ', 'X'}
         };
-        char[] expect = {'X','X','X','X'};
+        char[] expect = {'X', 'X', 'X', 'X'};
         char[] result = MatrixCheck.extractDiagonal(input);
-        assertThat(result,is(expect));
+        assertThat(result, is(expect));
     }
 
     @Test
-    public void whenDiagonal2(){
+    public void whenDiagonal2() {
         char[][] input = {
-                {'X','X',' ',' '},
-                {' ','X',' ',' '},
-                {' ','X',' ',' '},
-                {' ','X',' ','X'}
+                {'X', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', 'X'}
         };
-        char[] expect = {'X','X',' ','X'};
+        char[] expect = {'X', 'X', ' ', 'X'};
         char[] result = MatrixCheck.extractDiagonal(input);
-        assertThat(result,is(expect));
+        assertThat(result, is(expect));
     }
 
     @Test
-    public void whenDataMonoByTrueThenTrue(){
+    public void whenDataMonoByTrueThenTrue() {
         char[][] input = {
-                {' ',' ','X','X'},
-                {' ',' ','X','X'},
-                {' ',' ',' ','X'},
-                {' ',' ','X','X'},
+                {' ', ' ', 'X', 'X'},
+                {' ', ' ', 'X', 'X'},
+                {' ', ' ', ' ', 'X'},
+                {' ', ' ', 'X', 'X'},
         };
         boolean result = MatrixCheck.isWin(input);
-        assertThat(result,is(true));
+        assertThat(result, is(true));
     }
 
     @Test
-    public void whenDataNotMonoByTrueThenFalse(){
+    public void whenDataNotMonoByTrueThenFalse() {
         char[][] input = {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
@@ -107,7 +107,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
         };
         boolean result = MatrixCheck.isWin(input);
-        assertThat(result,is(false));
+        assertThat(result, is(false));
     }
 
     @Test

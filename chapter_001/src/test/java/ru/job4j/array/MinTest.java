@@ -10,23 +10,23 @@ import org.junit.Test;
  */
 public class MinTest {
     @Test
-    public void whenFirstMin(){
-        int[] input = {4,35,915,32,15,7,8};
+    public void whenFirstMin() {
+        int[] input = {4, 35, 915, 32, 15, 7, 8};
         int expect = 4;
         int result = Min.findMin(input);
-        assertThat(result,is(expect));
+        assertThat(result, is(expect));
     }
 
     @Test
-    public void whenLastMin(){
-        assertThat(Min.findMin(new int[]{54,41,8,3}),is(3));
+    public void whenLastMin() {
+        assertThat(Min.findMin(new int[]{54, 41, 8, 3}), is(3));
     }
 
     @Test
-    public void whenMiddleMin(){
+    public void whenMiddleMin() {
         assertThat(
                 Min.findMin(
-                        new int[]{7,9,2,84,5}
+                        new int[]{7, 9, 2, 84, 5}
                         ),
                 is(2));
     }

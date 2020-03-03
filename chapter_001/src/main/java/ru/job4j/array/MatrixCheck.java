@@ -13,11 +13,11 @@ public class MatrixCheck {
      * @param row строка для проверки
      * @return возвращает логическое выражение
      */
-    public static boolean monoHorizontal(char[][] board, int row){
+    public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
-        for(int i=0;i<board[row].length;i++){
-            if (board[row][i]!='X'){
-                result=false;
+        for (int i = 0; i < board[row].length; i++) {
+            if (board[row][i] != 'X') {
+                result = false;
                 break;
             }
         }
@@ -30,11 +30,11 @@ public class MatrixCheck {
      * @param colomn столбец для проверки
      * @return возвращает логическое вырадение
      */
-    public static boolean monoVertical(char[][] board, int colomn){
+    public static boolean monoVertical(char[][] board, int colomn) {
         boolean result = true;
-        for (int i=0;i<board.length;i++){
-            if(board[i][colomn]!='X'){
-                result=false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][colomn] != 'X') {
+                result = false;
                 break;
             }
         }
@@ -62,8 +62,8 @@ public class MatrixCheck {
      */
     public static char[] extractDiagonal(char[][] board){
         char[] result = new char[board.length];
-        for (int i=0;i<board.length;i++){
-            result[i]=board[i][i];
+        for (int i = 0; i < board.length; i++) {
+            result[i] = board[i][i];
         }
         return result;
     }
@@ -73,10 +73,10 @@ public class MatrixCheck {
      * @param board входная матрица
      * @return возвращает логическое выражение
      */
-    public static boolean isWin(char[][] board){
+    public static boolean isWin(char[][] board) {
         boolean result = false;
-        for (int i=0; i<board.length;i++){
-            if(board[i][i]=='X'  &&  (monoHorizontal(board,i) || monoVertical(board,i))) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X'  &&  (monoHorizontal(board, i) || monoVertical(board, i))) {
                 result = true;
                 break;
             }

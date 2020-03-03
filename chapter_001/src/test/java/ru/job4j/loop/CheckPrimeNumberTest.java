@@ -12,26 +12,26 @@ import static org.junit.Assert.assertThat;
 
 public class CheckPrimeNumberTest {
     @Test
-    public void when5(){
+    public void when5() {
         boolean rsl = CheckPrimeNumber.check(5);
-        assertThat(rsl,is(true));
+        assertThat(rsl, is(true));
     }
 
     @Test
-    public void when8(){
+    public void when8() {
         boolean rsl = CheckPrimeNumber.check(8);
-        assertThat(rsl,is(false));
+        assertThat(rsl, is(false));
     }
 
     @Test
-    public void when1(){
+    public void when1() {
         boolean rsl = CheckPrimeNumber.check(1);
-        assertThat(rsl,is(false));
+        assertThat(rsl, is(false));
     }
 
     @Test
-    public void when13(){
+    public void when13() {
         boolean rsl = CheckPrimeNumber.check(13);
-        assertThat(rsl,is(true));
+        assertThat(rsl, is(true));
     }
 }

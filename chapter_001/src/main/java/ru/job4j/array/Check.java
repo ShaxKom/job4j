@@ -11,7 +11,7 @@ public class Check {
      * @param data массив элементов с логическим выражением
      * @return логическое выражение
      */
-    public static boolean mono(boolean[] data){
+    public static boolean mono(boolean[] data) {
         boolean result = true;
         for (boolean datum : data) {
             if (data[0] != datum) {

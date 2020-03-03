@@ -13,10 +13,12 @@ public class MinDiapason {
      * @param finish конец диапазона
      * @return возвращает минимальный элемент
      */
-    public static int findMin(int[] array, int start, int finish){
+    public static int findMin(int[] array, int start, int finish) {
         int min = array[start];
-        for (int index=start;index<=finish;index++){
-            if(min>array[index]) min=array[index];
+        for (int index = start; index <= finish; index++) {
+            if (min > array[index]) {
+                min = array[index];
+            }
         }
         return min;
     }

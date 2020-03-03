@@ -6,22 +6,22 @@ import static org.hamcrest.core.Is.is;
 
 public class FitnessTest {
     @Test
-    public void whenIvanGreatNik(){
+    public void whenIvanGreatNik() {
         int expect = 0;
-        int rsl = Fitness.calc(95,00);
-        assertThat(rsl,is(expect));
+        int rsl = Fitness.calc(95, 00);
+        assertThat(rsl, is(expect));
     }
 
     @Test
-    public void whenIvanLessByOneNik(){
-        int rsl = Fitness.calc(90,95);
-        assertThat(rsl,is(1));
+    public void whenIvanLessByOneNik() {
+        int rsl = Fitness.calc(90, 95);
+        assertThat(rsl, is(1));
     }
 
     @Test
-    public void whenIvanLessByFewNik(){
-        int rsl = Fitness.calc(30,60);
-        assertThat(rsl,is(2));
+    public void whenIvanLessByFewNik() {
+        int rsl = Fitness.calc(30, 60);
+        assertThat(rsl, is(2));
     }
 
 

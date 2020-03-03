@@ -11,7 +11,7 @@ public class AlgoArray {
      * @param args args.
      */
     public static void main(String[] args) {
-        int[] array = new int[]{5, 3, 2, 1, 4,8,10,18};
+        int[] array = new int[]{5, 3, 2, 1, 4, 8, 10, 18};
         int temp = array[0];
         array[0] = array[3];
         array[3] = temp;

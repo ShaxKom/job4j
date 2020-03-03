@@ -11,11 +11,11 @@ import org.junit.Test;
  */
 public class DefragmentTest {
     @Test
-    public void singleFirstNull(){
-        String[] input = {null,"I"};
+    public void singleFirstNull() {
+        String[] input = {null, "I"};
         String[] result = Defragment.compress(input);
-        String[] expect = {"I",null};
-        assertThat(result,is(expect));
+        String[] expect = {"I", null};
+        assertThat(result, is(expect));
     }
     @Test
     public void notFirstNull() {

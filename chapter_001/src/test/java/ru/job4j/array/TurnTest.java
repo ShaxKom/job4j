@@ -10,11 +10,11 @@ import org.junit.Test;
  */
 public class TurnTest {
     @Test
-    public void when1to9(){
-        int[] input = new int[]{9,8,7,6,5,4,3,2,1};
-        int[] expect = new int[]{1,2,3,4,5,6,7,8,9};
+    public void when1to9() {
+        int[] input = new int[] {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] expect = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] rst = Turn.back(input);
-        assertThat(rst,is(expect));
+        assertThat(rst, is(expect));
     }
 
     @Test
@@ -27,9 +27,9 @@ public class TurnTest {
 
     @Test
     public void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {
-        int[] input = new int[]{5,4,3,2,1};
-        int[] expect = new int[]{1,2,3,4,5};
+        int[] input = new int[]{5, 4, 3, 2, 1};
+        int[] expect = new int[]{1, 2, 3, 4, 5};
         int[] rst = Turn.back(input);
-        assertThat(rst,is(expect));
+        assertThat(rst, is(expect));
     }
 }
