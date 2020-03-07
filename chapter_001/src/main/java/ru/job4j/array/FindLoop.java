@@ -22,7 +22,6 @@ public class FindLoop {
         }
         return rst;
     }
-
     /**
      * Поиск элемента в массиве в заданном диапазоне
      * @param data вводный массив
@@ -41,7 +40,6 @@ public class FindLoop {
         }
         return result;
     }
-
     /**
      * Сортировка заданного массива от наименьшего к наибольшему
      * @param data входной массив
@@ -53,8 +51,6 @@ public class FindLoop {
             int index = FindLoop.indexOf(data, min, i, data.length - 1);
             SwitchArray.swap(data, index, i);
         }
-
         return data;
     }
-
 }

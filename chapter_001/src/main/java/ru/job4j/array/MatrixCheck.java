@@ -5,7 +5,6 @@ package ru.job4j.array;
  * @author Shakhzod Kamilov
  * @version 4
  */
-
 public class MatrixCheck {
     /**
      * Проверяет строки
@@ -23,7 +22,6 @@ public class MatrixCheck {
         }
         return result;
     }
-
     /**
      * Проверяет столбцы
      * @param board входная матрица
@@ -53,21 +51,6 @@ public class MatrixCheck {
         }
         return result;
     }
-
-
-    /**
-     * Метод для извлечения диогонального содержимого матрицы
-     * @param board входная матрица
-     * @return возвращает массив диогонального содержимого матрицы
-     */
-    public static char[] extractDiagonal(char[][] board){
-        char[] result = new char[board.length];
-        for (int i = 0; i < board.length; i++) {
-            result[i] = board[i][i];
-        }
-        return result;
-    }
-
     /**
      * Проверяет имеет ли матрица горизонтально или вертикально расположенные символы'X'
      * @param board входная матрица

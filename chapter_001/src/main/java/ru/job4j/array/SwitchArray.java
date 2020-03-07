@@ -19,7 +19,6 @@ public class SwitchArray {
         array[dest] = temp;
         return array;
     }
-
     /**
      * Метод для перестановки первого и последнего элемента массива
      * @param array Входной массив
@@ -31,7 +30,6 @@ public class SwitchArray {
         array[array.length - 1] = temp;
         return array;
     }
-
     /**
      * Main
      * @param args - args

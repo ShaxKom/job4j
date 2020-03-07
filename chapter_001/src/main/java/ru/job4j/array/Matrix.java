@@ -1,5 +1,4 @@
 package ru.job4j.array;
-
 /**
  * Таблица умножения
  * @author Shakhzod Kamilov

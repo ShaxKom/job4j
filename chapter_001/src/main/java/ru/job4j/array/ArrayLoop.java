@@ -1,10 +1,8 @@
 package ru.job4j.array;
-
 /**
  * Класс для записи данных в массив с помощью цикла
  * @author Shakhzod Kamilov
  */
-
 public class ArrayLoop {
     /**
      * Main.

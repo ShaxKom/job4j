@@ -29,7 +29,6 @@ public class Slash {
     }
         System.out.println();
 }
-
     /**
      * Main.
      * @param args - args

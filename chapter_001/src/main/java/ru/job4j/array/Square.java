@@ -18,7 +18,6 @@ public class Square {
         }
         return rst;
     }
-
     /**
      * Main. Расчёт и вывод результата на консоль
      * @param args-args

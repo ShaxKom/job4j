@@ -38,7 +38,6 @@ public class Merge {
                second++;
            }
        }
-
         return result;
     }
 }
