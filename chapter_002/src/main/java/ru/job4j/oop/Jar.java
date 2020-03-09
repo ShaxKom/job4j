@@ -4,11 +4,11 @@ public class Jar {
     private int value;
 
     public Jar(int size) {
-        this.value=size;
+        this.value = size;
     }
 
-    public void pour(Jar another){
-        this.value=this.value + another.value;
+    public void pour(Jar another) {
+        this.value = this.value + another.value;
         another.value = 0;
     }
 
