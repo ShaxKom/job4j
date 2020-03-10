@@ -7,6 +7,10 @@ public class Battery {
         this.load = size;
     }
 
+    public int getLoad() {
+        return load;
+    }
+
     public void exchange(Battery another) {
         another.load = another.load + this.load;
         this.load = 0;
