@@ -13,14 +13,20 @@ public class MaxTest {
 
     @Test
     public void whenMax1to2Then1() {
-        int result = Max.max(51, 23);
-        assertThat(result, is(51));
+        int result = Max.max(51, 23, 85);
+        assertThat(result, is(85));
     }
 
     @Test
     public void whenMax1to2Equal() {
         int result = Max.max(14, 14);
         assertThat(result, is(14));
+    }
+
+    @Test
+    public void whenMax1of4() {
+        int result = Max.max(51, 35, 84, 97);
+        assertThat(result, is(97));
     }
 
 }
