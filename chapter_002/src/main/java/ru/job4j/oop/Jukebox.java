@@ -1,22 +1,23 @@
 package ru.job4j.oop;
 
 public class Jukebox {
+    private static final String LN = System.lineSeparator();
     public void music(int position) {
         if (position == 1) {
-            System.out.println("Пуст бегут неуклюже" + System.lineSeparator()
-                    + "Пешеходы по лужам," + System.lineSeparator()
-                    + "А вода — по асфальту рекой." + System.lineSeparator()
-                    + "И неясно прохожим" + System.lineSeparator()
-                    + "В этот день непогожий," + System.lineSeparator()
-                    + "Почему я веселый такой." + System.lineSeparator()
+            System.out.println("Пуст бегут неуклюже" + LN
+                    + "Пешеходы по лужам," + LN
+                    + "А вода — по асфальту рекой." + LN
+                    + "И неясно прохожим" + LN
+                    + "В этот день непогожий," + LN
+                    + "Почему я веселый такой." + LN
                     + "");
         } else if (position == 2) {
-            System.out.println("Спят усталые игрушки, книжки спят." + System.lineSeparator()
-                    + "Одеяла и подушки ждут ребят." + System.lineSeparator()
-                    + "Даже сказка спать ложится," + System.lineSeparator()
-                    + "Чтобы ночью нам присниться." + System.lineSeparator()
-                    + "Ты ей пожелай:" + System.lineSeparator()
-                    + "Баю-бай." + System.lineSeparator()
+            System.out.println("Спят усталые игрушки, книжки спят." + LN
+                    + "Одеяла и подушки ждут ребят." + LN
+                    + "Даже сказка спать ложится," + LN
+                    + "Чтобы ночью нам присниться." + LN
+                    + "Ты ей пожелай:" + LN
+                    + "Баю-бай." + LN
                     + "");
         } else {
             System.out.println("Песня не найдена");
