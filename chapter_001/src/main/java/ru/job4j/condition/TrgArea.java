@@ -40,9 +40,20 @@ public class TrgArea {
         double b = second.distance(third);
         double c = third.distance(first);
         double rsl = -1;
-        if (Triangle.exist(a, b, c)) {
+        if (exist(a, b, c)) {
             rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         }
         return rsl;
+    }
+
+    /**
+     * Проверяет, может ли существовать треугольник с заданными длинами сторон
+     * @param ab первая сторона
+     * @param ac вторая сторона
+     * @param bc третья сторона
+     * @return возвращает логическое вырожение
+     */
+    public boolean exist(double ab, double ac, double bc) {
+        return ((ab + ac) > bc && (ab + bc) > ac && (bc + ac) > ab);
     }
 }
