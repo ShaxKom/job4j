@@ -76,13 +76,34 @@ public class Tracker {
      * @return заявка
      */
     public Item findById(String id) {
-        Item result = null;
-        for (int index = 0; index < position; index++) {
-            if (items[index].getId().equals(id)) {
-                result = items[index];
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
+    }
+
+    /**
+     * Поиск ячейки заявки по ID
+     * @param id номер заявки
+     * @return номер ячейки
+     */
+    private int indexOf(String id) {
+        int index = -1;
+        for (int i = 0; i < position; i++) {
+            if (items[i].getId().equals(id)) {
+                index = i;
                 break;
             }
         }
-        return result;
+        return index;
+    }
+
+    /**
+     * Замена заявки с сохранением старой ID
+     * @param id номер заяки которую нужно заменить
+     * @param item новая заявка
+     */
+    public void replace(String id, Item item) {
+    int index = indexOf(id);
+    item.setId(id);
+    items[index] = item;
     }
 }
