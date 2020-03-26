@@ -106,4 +106,15 @@ public class Tracker {
     item.setId(id);
     items[index] = item;
     }
+
+    /**
+     * Удаление заявки из хранилища
+     * @param id
+     */
+    public void delete(String id) {
+        int index = indexOf(id);
+        System.arraycopy(items, index + 1, items, index, position - index);
+        items[position - 1] = null;
+        position--;
+    }
 }
