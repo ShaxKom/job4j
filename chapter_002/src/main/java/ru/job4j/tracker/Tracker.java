@@ -107,10 +107,15 @@ public class Tracker {
      * Удаление заявки из хранилища
      * @param id
      */
-    public void delete(String id) {
+    public boolean delete(String id) {
+        boolean truth = false;
         int index = indexOf(id);
-        System.arraycopy(items, index + 1, items, index, position - index);
-        items[position - 1] = null;
-        position--;
+        if (index != -1) {
+            System.arraycopy(items, index + 1, items, index, position - index);
+            items[position - 1] = null;
+            position--;
+            truth = true;
+        }
+        return truth;
     }
 }
