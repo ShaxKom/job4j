@@ -40,16 +40,7 @@ public class Tracker {
      * @return заявки
      */
     public Item[] findAll() {
-        int size = 0;
-        Item[] itemWithoutNull = new Item[position];
-        for (int index = 0; index < position; index++) {
-            if (items[index] != null) {
-                itemWithoutNull[size] = items[index];
-                size++;
-            }
-        }
-        itemWithoutNull = Arrays.copyOf(itemWithoutNull, size);
-        return itemWithoutNull;
+        return Arrays.copyOf(items, position);
     }
 
     /**
