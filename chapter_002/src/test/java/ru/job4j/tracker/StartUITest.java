@@ -43,4 +43,33 @@ public class StartUITest {
         action.execute(input, tracker);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
+
+    @Test
+    public void whenCreateAction() {
+        Input input = new StubInput(new String[] {"0", "Item creation", "1"});
+        Tracker tracker = new Tracker();
+        UserAction[] action = {new CreateAction(), new ExitAction()};
+        new StartUI().init(input, tracker, action);
+        assertThat(tracker.findAll()[0].getName(), is("Item creation"));
+    }
+
+    @Test
+    public void whenReplaceAction() {
+        Tracker tracker = new Tracker();
+        tracker.add(new Item("New Item"));
+        UserAction[] action = {new ReplaceAction(), new ExitAction()};
+        Input input = new StubInput(new String[] {"0", tracker.findAll()[0].getId(), "Replaced Item", "1"});
+        new StartUI().init(input, tracker, action);
+        assertThat(tracker.findAll()[0].getName(), is("Replaced Item"));
+    }
+
+    @Test
+    public void whenDeleteAction() {
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("new Item"));
+        UserAction[] action = {new DeleteAction(), new ExitAction()};
+        Input input = new StubInput(new String[] {"0", tracker.findAll()[0].getId(), "1"});
+        new StartUI().init(input, tracker, action);
+        assertThat(tracker.findById(item.getId()), is(nullValue()));
+    }
 }
