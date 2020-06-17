@@ -56,9 +56,9 @@ public class StartUITest {
     @Test
     public void whenReplaceAction() {
         Tracker tracker = new Tracker();
-        tracker.add(new Item("New Item"));
+        Item item = tracker.add(new Item("New Item"));
         UserAction[] action = {new ReplaceAction(), new ExitAction()};
-        Input input = new StubInput(new String[] {"0", tracker.findAll()[0].getId(), "Replaced Item", "1"});
+        Input input = new StubInput(new String[] {"0", item.getId(), "Replaced Item", "1"});
         new StartUI().init(input, tracker, action);
         assertThat(tracker.findAll()[0].getName(), is("Replaced Item"));
     }
@@ -68,7 +68,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("new Item"));
         UserAction[] action = {new DeleteAction(), new ExitAction()};
-        Input input = new StubInput(new String[] {"0", tracker.findAll()[0].getId(), "1"});
+        Input input = new StubInput(new String[] {"0", item.getId(), "1"});
         new StartUI().init(input, tracker, action);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
