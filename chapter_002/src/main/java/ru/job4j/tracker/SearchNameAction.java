@@ -16,15 +16,15 @@ public class SearchNameAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        System.out.println("=== Item search ===");
+        out.println("=== Item search ===");
         String name = input.askStr("Enter item's name: ");
         Item[] items = tracker.findByName(name);
         if (items.length != 0) {
             for (Item item : items) {
-                System.out.println(item);
+                out.println(item);
             }
         } else {
-            System.out.println("Item wasn't found!");
+            out.println("Item wasn't found!");
         }
         return true;
     }
