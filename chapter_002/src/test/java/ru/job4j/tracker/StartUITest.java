@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+import ru.job4j.ex.User;
 
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.*;
@@ -138,5 +139,20 @@ public class StartUITest {
                 + "Menu." + System.lineSeparator()
                 + "0. Find item by Id" + System.lineSeparator()
                 + "1. Exit program" + System.lineSeparator()));
+    }
+
+    @Test
+    public void whenInvalidExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(new String[]{"2", "0"});
+        Tracker tracker = new Tracker();
+        UserAction[] action = {new ExitAction()};
+        new StartUI(out).init(in, tracker, action);
+        assertThat(out.toString(), is(String.format(
+                "Menu.%n"
+                + "0. Exit program%n"
+                + "Wrong input, you can select: 0 .. 0%n"
+                + "Menu.%n"
+                + "0. Exit program%n")));
     }
 }
